@@ -1,4 +1,5 @@
-# Smartphone Sales Dashboard (Power BI)
+# smartphone Market Analytics
+
 ## Project Overview
 
 This project presents an interactive Power BI dashboard built to analyze smartphone sales data. It provides actionable insights into brand performance, pricing trends, customer preferences, and key business metrics.
