@@ -1,4 +1,4 @@
-#  Smartphone Market Analysis Dashboard
+#  Smartphone Market Analysis 
 
 > An interactive **Power BI** dashboard providing end-to-end analysis of the global smartphone market — covering device specs, pricing tiers, brand distribution, connectivity trends, and camera capabilities.
 
@@ -114,7 +114,7 @@ Contributions are welcome! To suggest improvements:
 
 ##  Contact
 
-For questions or feedback, open an [issue](https://github.com/your-username/smartphone-dashboard/issues) or reach out via GitHub.
+For questions or feedback, open an [issue](https://github.com/Sreehari-ep/smartphone-Market-Analytics/tree/main) or reach out via GitHub.
 
 ---
 
