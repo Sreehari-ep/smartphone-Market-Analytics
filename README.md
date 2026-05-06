@@ -1,81 +1,123 @@
-# smartphone Market Analytics
+#  Smartphone Market Analysis Dashboard
 
-## Project Overview
+> An interactive **Power BI** dashboard providing end-to-end analysis of the global smartphone market — covering device specs, pricing tiers, brand distribution, connectivity trends, and camera capabilities.
 
-This project presents an interactive Power BI dashboard built to analyze smartphone sales data. It provides actionable insights into brand performance, pricing trends, customer preferences, and key business metrics.
+---
 
-The dashboard is designed for data-driven decision-making, enabling stakeholders to quickly understand market trends and optimize strategies.
+##  Dashboard Overview
 
-## Objectives
-Analyze smartphone sales performance across brands
-Identify pricing trends and customer buying patterns
-Compare specifications vs price
-Highlight top-performing products and categories
-Provide an intuitive and professional dashboard for business use
-## Dataset Description
+This `.pbix` report is structured across **3 focused pages**, each exploring a distinct dimension of the smartphone dataset.
 
-The dataset includes key smartphone attributes such as:
+---
 
- Brand Name
- Price
- RAM & Storage
- Battery Capacity
- Camera Specifications
- Ratings / Reviews
- Launch Details
- Data Preprocessing
+### Page 1 — Market Overview
 
-The following steps were performed:
+A high-level snapshot of the smartphone landscape.
 
-Removed missing and duplicate values
-Converted data types (numeric, categorical)
-Handled outliers where necessary
-Standardized column names
-Created calculated columns and measures in Power BI
-## Dashboard Features
-🔹 Key Metrics (KPI Cards)
-Total Products
-Average Price
-Average Rating
-Total Brands
+| Visual | Description |
+|--------|-------------|
+| **KPI Cards** | Total Devices, 5G Penetration %, Average Rating |
+| **Donut Chart** | 5G vs 4G device split |
+| **Column Chart** | Device count by RAM band |
+| **Slicer** | Filter by brand name |
 
-🔹 Visualizations
- Bar Chart → Brand vs Number of Models
- Donut Chart → Market share by brand
- Line Chart → Price trends
- Scatter Plot → Price vs Specifications (RAM, Battery, etc.)
- Table View → Detailed product-level insights
+---
 
-🔹 Filters / Slicers
-Brand
-Price Range
-RAM / Storage
-Ratings
-## Key Insights
-Premium brands dominate higher price segments
-Budget phones offer high battery capacity and value
-Strong correlation between RAM and price
-Certain brands maintain consistently high ratings
-## Tools & Technologies
-Power BI – Data visualization & dashboard creation
-Data Cleaning – Power Query Editor
-DAX – Calculated measures and KPIs
+### Page 2 — Brand & Segment Analysis
 
-## Use Cases
-Business intelligence reporting
-Market trend analysis
-Product comparison
-Data visualization portfolio project
-📷 Dashboard Preview
+Deep-dive into brand performance and product segmentation.
 
-(Add screenshots here for better presentation)
+| Visual | Description |
+|--------|-------------|
+| **Clustered Column Chart** | Total devices by price band |
+| **Donut Chart** | Device distribution by battery band |
+| **Treemap** | Model count per brand |
+| **Line Chart** | Average price by processor brand |
+| **Clustered Bar Chart** | Total devices ranked by brand |
 
-## Future Enhancements
-Add time-series sales analysis
-Integrate real-time data
-Include predictive analytics
-Improve UI/UX with advanced visuals
-#### Author
+---
 
-Sreehari EP
-Aspiring Data Analyst | Power BI Developer
+### Page 3 — Technical Specifications
+
+Granular analysis of hardware and software features.
+
+| Visual | Description |
+|--------|-------------|
+| **Column Chart** | Fast charging availability by brand |
+| **Table** | Model-level specs — rear/front camera (MP), refresh rate |
+| **Donut Chart** | OS (Android / iOS / Other) distribution |
+| **Line Chart** | Price trend by processor brand |
+
+---
+
+##  Dataset
+
+**Source file:** `https://app.gigasheet.com/spreadsheet/real-world-smartphones-dataset/196cc5ce_9bc1_41ab_b794_f93df5b6b482`
+
+The dataset includes the following fields (non-exhaustive):
+
+| Field | Description |
+|-------|-------------|
+| `brand_name` | Smartphone manufacturer |
+| `model` | Device model name |
+| `price` | Retail price |
+| `os` | Operating system |
+| `processor_brand` | Chipset manufacturer |
+| `ram` | RAM capacity |
+| `primary_camera_rear` | Rear camera resolution (MP) |
+| `primary_camera_front` | Front camera resolution (MP) |
+| `refresh_rate` | Display refresh rate (Hz) |
+| `battery` | Battery capacity |
+| `fast_charging_available` | Fast charging support (Yes/No) |
+| `5G_or_4G` | Network connectivity generation |
+
+**Calculated / Derived Measures:**
+
+- `Total Devices` — Count of devices
+- `5G Penetration %` — Percentage of 5G-capable devices
+- `Avg Rating` — Average user rating
+- `Price Band` — Bucketed price segments (Budget / Mid-range / Premium)
+- `Ram Band` — Bucketed RAM tiers
+- `Battery Band` — Bucketed battery capacity tiers
+
+---
+
+##  Requirements
+
+| Tool | 
+|------|
+| [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) |
+
+
+---
+
+## 🔍 Key Insights the Dashboard Can Answer
+
+- Which brands dominate the market by device count?
+- What percentage of smartphones support 5G?
+- How do prices vary across processor brands?
+- What is the distribution of RAM tiers across the market?
+- Which brands offer fast charging, and how does that vary?
+- How do Android vs iOS devices compare in market share?
+- What are the camera and display specs of top-rated models?
+
+---
+
+
+##  Contributing
+
+Contributions are welcome! To suggest improvements:
+
+
+---
+
+
+##  Contact
+
+For questions or feedback, open an [issue](https://github.com/your-username/smartphone-dashboard/issues) or reach out via GitHub.
+
+---
+
+*Built with using Microsoft Power BI*
+
+
