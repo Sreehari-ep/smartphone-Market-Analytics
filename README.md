@@ -1,123 +1,103 @@
-#  Smartphone Market Analysis 
+#  Smartphone Market Analysis
 
-> An interactive **Power BI** dashboard providing end-to-end analysis of the global smartphone market — covering device specs, pricing tiers, brand distribution, connectivity trends, and camera capabilities.
+> An interactive Power BI dashboard providing comprehensive insights into the global smartphone market — covering device specs, pricing tiers, OS distribution, connectivity, and brand performance.
 
 ---
 
 ##  Dashboard Overview
 
-This `.pbix` report is structured across **3 focused pages**, each exploring a distinct dimension of the smartphone dataset.
+This Power BI report (`smartphone_dashboard.pbix`) is a two-page interactive dashboard built on the `Smartphone_Dataset_new` dataset. It enables analysts and product teams to explore market trends across brands, hardware specifications, price segments, and connectivity standards.
 
 ---
+
+##  Pages
 
 ### Page 1 — Market Overview
+A high-level summary of the smartphone landscape with key KPIs and segmentation.
 
-A high-level snapshot of the smartphone landscape.
-
-| Visual | Description |
-|--------|-------------|
-| **KPI Cards** | Total Devices, 5G Penetration %, Average Rating |
-| **Donut Chart** | 5G vs 4G device split |
-| **Column Chart** | Device count by RAM band |
-| **Slicer** | Filter by brand name |
-
----
-
-### Page 2 — Brand & Segment Analysis
-
-Deep-dive into brand performance and product segmentation.
-
-| Visual | Description |
-|--------|-------------|
-| **Clustered Column Chart** | Total devices by price band |
-| **Donut Chart** | Device distribution by battery band |
-| **Treemap** | Model count per brand |
-| **Line Chart** | Average price by processor brand |
-| **Clustered Bar Chart** | Total devices ranked by brand |
+| Visual | Type | Description |
+|--------|------|-------------|
+| Total Devices | Card | Total number of devices in the dataset |
+| 5G Penetration % | Card | Share of 5G-enabled devices across the market |
+| Avg Rating | Card | Average user/reviewer rating across all devices |
+| 5G vs 4G Distribution | Donut Chart | Breakdown of 5G and 4G device counts |
+| Devices by RAM Band | Column Chart | Distribution of devices across RAM tiers |
+| Brand Filter | Slicer | Filter all visuals by brand name |
 
 ---
 
-### Page 3 — Technical Specifications
+### Page 2 — Deep-Dive Analysis
+Detailed breakdowns by price, battery, OS, processor, and camera specifications.
 
-Granular analysis of hardware and software features.
-
-| Visual | Description |
-|--------|-------------|
-| **Column Chart** | Fast charging availability by brand |
-| **Table** | Model-level specs — rear/front camera (MP), refresh rate |
-| **Donut Chart** | OS (Android / iOS / Other) distribution |
-| **Line Chart** | Price trend by processor brand |
+| Visual | Type | Description |
+|--------|------|-------------|
+| Devices by Price Band | Clustered Column Chart | Count of devices segmented by price range |
+| Battery Capacity Groups | Donut Chart | Distribution of devices across battery capacity tiers |
+| Model Count by Brand | Treemap | Visual representation of model portfolio size per brand |
+| Price by Processor Brand | Line Chart | Average/total price trends across processor manufacturers |
+| Android vs iOS vs Other | Donut Chart | OS market share by brand count |
+| Camera & Specs Table | Table | Detailed breakdown including rear camera specs, brand, and model |
 
 ---
 
-##  Dataset
+##  Key Metrics & Fields
 
-**Source file:** `https://app.gigasheet.com/spreadsheet/real-world-smartphones-dataset/196cc5ce_9bc1_41ab_b794_f93df5b6b482`
-
-The dataset includes the following fields (non-exhaustive):
-
-| Field | Description |
-|-------|-------------|
-| `brand_name` | Smartphone manufacturer |
+| Field / Measure | Description |
+|-----------------|-------------|
+| `Total Devices` | Count of all smartphone entries |
+| `5G Penetration %` | Percentage of devices with 5G support |
+| `Avg Rating` | Mean rating across the dataset |
+| `5G_or_4G` | Connectivity generation classification |
+| `brand_name` | Manufacturer/brand |
 | `model` | Device model name |
-| `price` | Retail price |
-| `os` | Operating system |
-| `processor_brand` | Chipset manufacturer |
-| `ram` | RAM capacity |
-| `primary_camera_rear` | Rear camera resolution (MP) |
-| `primary_camera_front` | Front camera resolution (MP) |
-| `refresh_rate` | Display refresh rate (Hz) |
-| `battery` | Battery capacity |
-| `fast_charging_available` | Fast charging support (Yes/No) |
-| `5G_or_4G` | Network connectivity generation |
-
-**Calculated / Derived Measures:**
-
-- `Total Devices` — Count of devices
-- `5G Penetration %` — Percentage of 5G-capable devices
-- `Avg Rating` — Average user rating
-- `Price Band` — Bucketed price segments (Budget / Mid-range / Premium)
-- `Ram Band` — Bucketed RAM tiers
-- `Battery Band` — Bucketed battery capacity tiers
+| `Ram Band` | RAM tier grouping (e.g., 4GB, 8GB, 12GB+) |
+| `Price Band` | Price tier grouping (budget, mid-range, flagship) |
+| `Battery Band` | Battery capacity tier grouping |
+| `processor_brand` | Chipset manufacturer (e.g., Qualcomm, MediaTek, Apple) |
+| `os` | Operating system (Android, iOS, Other) |
+| `primary_camera_rear` | Rear primary camera resolution (MP) |
+| `price` | Device retail price |
 
 ---
-
-##  Requirements
-
-| Tool | 
-|------|
-| [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) |
 
 
 ---
 
-## 🔍 Key Insights the Dashboard Can Answer
+##  Repository Structure
 
-- Which brands dominate the market by device count?
-- What percentage of smartphones support 5G?
-- How do prices vary across processor brands?
-- What is the distribution of RAM tiers across the market?
-- Which brands offer fast charging, and how does that vary?
-- How do Android vs iOS devices compare in market share?
-- What are the camera and display specs of top-rated models?
+```
+smartphone-dashboard/
+│
+├── smartphone_dashboard.pbix   # Power BI report file
+├── README.md                   # Project documentation
+└── data/
+    └── Smartphone_Dataset_new  # Source dataset (add CSV/Excel if applicable)
+```
 
 ---
 
+##  Use Cases
+
+- **Market Research** — Identify which price segments and brands dominate device volumes
+- **Product Strategy** — Benchmark specs (RAM, battery, camera) across competitors
+- **Connectivity Trends** — Measure 5G adoption rates across the market
+- **OS Analysis** — Understand Android vs iOS vs other OS distribution by brand
+
+---
+
+##  Notes
+
+- The dashboard was built and last updated in **May 2026**
+- All visuals are cross-filtered — clicking any chart segment will filter the rest of the page
+- The dataset (`Smartphone_Dataset_new`) must remain connected for data refresh
+
+---
 
 ##  Contributing
 
-Contributions are welcome! To suggest improvements:
-
-
----
-
-
-##  Contact
-
-For questions or feedback, open an [issue](https://github.com/Sreehari-ep/smartphone-Market-Analytics/tree/main) or reach out via GitHub.
+Contributions are welcome! To suggest improvements
 
 ---
 
-*Built with using Microsoft Power BI*
-
-
+## Source file
+https://app.gigasheet.com/spreadsheet/real-world-smartphones-dataset/196cc5ce_9bc1_41ab_b794_f93df5b6b482
